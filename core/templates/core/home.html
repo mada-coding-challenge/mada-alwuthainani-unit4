@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}
+PlayToCode - Home
+{% endblock %}
+
+{% block content %}
+<section class="hero-container">
+
+  <!-- Left Column: Typography, Indicators, and Button -->
+  <div class="hero-left">
+    <h1 class="hero-retro-title">
+      <span class="retro-line line-magenta">PLAY MORE</span>
+      <span class="retro-line line-yellow">TO &nbsp; LEARN </span>
+    </h1>
+
+    <p class="hero-paragraph">
+        Dive into interactive coding games and challenges that make learning web development fun and engaging. Explore, play, and level up your coding skills today!
+    </p>
+
+    <!-- 4 Neon Yellow Indicator Dots -->
+    <div class="hero-indicator-dots" aria-hidden="true">
+      <span class="neon-dot"></span>
+      <span class="neon-dot"></span>
+      <span class="neon-dot"></span>
+      <span class="neon-dot"></span>
+    </div>
+
+    <!-- Electric Cyan Pill CTA -->
+    <div class="hero-button-wrapper">
+      <a href="{% url 'resource_list' %}" class="btn-cyan-pill">
+        PLAY
+      </a>
+    </div>
+  </div>
+
+  <!-- Right Column: Vector Arcade Console & Controllers Scene -->
+  <div class="hero-right" aria-hidden="true">
+    <svg class="arcade-scene-svg" viewBox="0 0 640 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="vector-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <linearGradient id="console-neon-border" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00ff66" />
+          <stop offset="45%" stop-color="#00f5ff" />
+          <stop offset="100%" stop-color="#ff0099" />
+        </linearGradient>
+      </defs>
+
+      <!-- Background Floating Confetti & Shapes -->
+      <!-- Top Yellow Star -->
+      <polygon points="345,50 349,63 363,63 352,71 356,84 345,76 334,84 338,71 327,63 341,63" 
+               stroke="#ffe600" stroke-width="3" fill="none" filter="url(#vector-glow)"/>
+      <!-- Bottom Left Pink Star -->
+      <polygon points="55,420 60,434 75,434 63,443 67,457 55,448 43,457 47,443 35,434 50,434" 
+               stroke="#ff0099" stroke-width="3.5" fill="none" filter="url(#vector-glow)"/>
+      <!-- Right Green Star -->
+      <polygon points="465,185 468,193 477,193 470,198 472,206 465,201 458,206 460,198 453,193 462,193" 
+               stroke="#00ff66" stroke-width="2.5" fill="none"/>
+
+      <!-- Hollow Squares -->
+      <rect x="365" y="160" width="16" height="16" rx="2" stroke="#ff0099" stroke-width="3" fill="none"/>
+      <rect x="252" y="385" width="16" height="16" rx="2" stroke="#ffe600" stroke-width="3" fill="none"/>
+      <rect x="80" y="475" width="14" height="14" rx="2" stroke="#00ff66" stroke-width="3" fill="none"/>
+
+      <!-- Crosses (+) -->
+      <path d="M418,200 L430,200 M424,194 L424,206" stroke="#00f5ff" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M236,440 L248,440 M242,434 L242,446" stroke="#ff7700" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M380,435 L392,435 M386,429 L386,441" stroke="#ff0099" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- Circles & Dots -->
+      <circle cx="315" cy="200" r="9" stroke="#ffe600" stroke-width="3.5" fill="none"/>
+      <circle cx="58" cy="385" r="7" stroke="#ff7700" stroke-width="3" fill="none"/>
+      <circle cx="445" cy="150" r="6" stroke="#00ff66" stroke-width="3" fill="none"/>
+      <circle cx="482" cy="165" r="7" stroke="#ff0099" stroke-width="3" fill="none"/>
+      <circle cx="330" cy="470" r="5" stroke="#ffe600" stroke-width="3" fill="none"/>
+      <circle cx="475" cy="470" r="6" stroke="#00ff66" stroke-width="3" fill="none"/>
+
+      <!-- Console Body (Rotated ~ -15deg) -->
+      <g transform="rotate(-15 270 300)">
+        <!-- Main Console Outer Shell -->
+        <rect x="180" y="170" width="190" height="155" rx="26" 
+              stroke="url(#console-neon-border)" stroke-width="6" fill="#130430" filter="url(#vector-glow)"/>
+        
+        <!-- Large Disc Drive Lid -->
+        <circle cx="275" cy="245" r="46" stroke="#00f5ff" stroke-width="4.5" fill="none"/>
+        <circle cx="275" cy="245" r="18" stroke="#00f5ff" stroke-width="2.5" fill="none" stroke-dasharray="4 4"/>
+
+        <!-- Cooling Slots (Green Lines) -->
+        <line x1="200" y1="212" x2="200" y2="278" stroke="#00ff66" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="208" y1="216" x2="208" y2="274" stroke="#00ff66" stroke-width="3.5" stroke-linecap="round"/>
+
+        <!-- Yellow Power Buttons -->
+        <circle cx="228" cy="302" r="5" stroke="#ffe600" stroke-width="3" fill="none"/>
+        <circle cx="244" cy="302" r="5" stroke="#ffe600" stroke-width="3" fill="none"/>
+
+        <!-- Front Port Connectors ("00") -->
+        <rect x="306" y="286" width="9" height="20" rx="4" stroke="#ffe600" stroke-width="3" fill="none"/>
+        <rect x="320" y="286" width="9" height="20" rx="4" stroke="#ffe600" stroke-width="3" fill="none"/>
+      </g>
+
+      <!-- Cable 1 (Orange Looping Ribbon to Top Controller) -->
+      <path d="M345,325 C390,345 400,260 440,240 C470,225 490,210 495,225 C500,245 470,240 450,250" 
+            stroke="#ff7700" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+      <!-- Controller 1 (Top Controller in Pink Neon) -->
+      <g transform="translate(430, 220)">
+        <rect x="0" y="0" width="112" height="62" rx="16" stroke="#ff0099" stroke-width="5" fill="#130430" filter="url(#vector-glow)"/>
+        <!-- D-Pad -->
+        <path d="M22,20 H32 V26 H38 V36 H32 V42 H22 V36 H16 V26 H22 Z" stroke="#ffe600" stroke-width="2.5" fill="none"/>
+        <!-- Center Buttons -->
+        <circle cx="53" cy="31" r="2.5" fill="#ff7700"/>
+        <circle cx="61" cy="31" r="2.5" fill="#ff7700"/>
+        <!-- Action Cluster (4 Round Buttons) -->
+        <circle cx="80" cy="24" r="5" stroke="#00ff66" stroke-width="2.5" fill="none"/>
+        <circle cx="93" cy="24" r="5" stroke="#ffe600" stroke-width="2.5" fill="none"/>
+        <circle cx="80" cy="38" r="5" stroke="#00f5ff" stroke-width="2.5" fill="none"/>
+        <circle cx="93" cy="38" r="5" stroke="#ff0099" stroke-width="2.5" fill="none"/>
+      </g>
+
+      <!-- Cable 2 (Cyan Looping Wire to Bottom Controller) -->
+      <path d="M320,345 C325,400 350,450 410,445 C470,440 475,385 475,340 C475,320 460,325 465,350" 
+            stroke="#00f5ff" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+      <!-- Controller 2 (Bottom Controller in Cyan Neon) -->
+      <g transform="translate(425, 345) rotate(-18)">
+        <rect x="0" y="0" width="112" height="62" rx="16" stroke="#00f5ff" stroke-width="5" fill="#130430" filter="url(#vector-glow)"/>
+        <!-- D-Pad -->
+        <path d="M22,20 H32 V26 H38 V36 H32 V42 H22 V36 H16 V26 H22 Z" stroke="#ff0099" stroke-width="2.5" fill="none"/>
+        <!-- Center Buttons -->
+        <circle cx="53" cy="31" r="2.5" fill="#ffe600"/>
+        <circle cx="61" cy="31" r="2.5" fill="#ffe600"/>
+        <!-- Action Cluster -->
+        <circle cx="80" cy="24" r="5" stroke="#ffe600" stroke-width="2.5" fill="none"/>
+        <circle cx="93" cy="24" r="5" stroke="#ff7700" stroke-width="2.5" fill="none"/>
+        <circle cx="80" cy="38" r="5" stroke="#ff0099" stroke-width="2.5" fill="none"/>
+        <circle cx="93" cy="38" r="5" stroke="#00ff66" stroke-width="2.5" fill="none"/>
+      </g>
+    </svg>
+  </div>
+
+</section>
+{% endblock %}

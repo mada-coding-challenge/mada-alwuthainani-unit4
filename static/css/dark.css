@@ -1,0 +1,136 @@
+/* Outer window background */
+body {
+  background-color: #7234e8;
+  color: #ffffff;
+}
+
+/* Main inner card/canvas */
+.app-viewport-frame {
+  background-color: #130336;
+  border: 2px solid #280e5b;
+}
+
+/* Header & Nav */
+.app-navbar-header {
+  border-bottom: 1px solid #280e5b;
+}
+
+.nav-brand {
+  color: #ffffff;
+}
+
+.nav-links a {
+  color: #d6ccf2;
+}
+
+.nav-links a:hover {
+  color: #00f5ff;
+}
+
+/* Search pill on right */
+.nav-search-pill {
+  background-color: #ffffff;
+}
+
+.search-glass-icon svg {
+  stroke: #ff0099;
+}
+
+.pill-browse-btn {
+  background-color: #ff0099;
+  color: #ffffff;
+}
+
+/* Home Neon Titles */
+.line-magenta {
+  color: #ff0099;
+}
+
+.line-yellow {
+  color: #ffe600;
+}
+
+.hero-paragraph {
+  color: #b4a7d6;
+}
+
+.neon-dot {
+  background-color: #ffe600;
+}
+
+/* Read More Button */
+.btn-cyan-pill {
+  background-color: #00f5ff;
+  color: #0d022b;
+}
+
+/* Resource Cards */
+.resource-card {
+  background-color: #1c084a;
+  border: 1px solid #32137d;
+}
+
+.resource-card:hover {
+  border-color: #00f5ff;
+}
+
+.card-media {
+  background-color: #140436;
+}
+
+.card-badge {
+  background-color: #130336;
+  color: #ffe600;
+  border: 1px solid #ffe600;
+}
+
+.card-body h2 {
+  color: #ffffff;
+}
+
+.card-body p {
+  color: #b4a7d6;
+}
+
+/* Buttons */
+.btn,
+.btn-primary {
+  background-color: #00f5ff;
+  color: #0d022b;
+}
+
+.btn-secondary {
+  background-color: #2b1168;
+  color: #ffffff;
+  border-color: #441e9e;
+}
+
+/* Forms */
+form {
+  background-color: #1c084a;
+  border: 1px solid #32137d;
+}
+
+form label {
+  color: #b4a7d6;
+}
+
+form input,
+form select,
+form textarea {
+  background-color: #140436;
+  color: #ffffff;
+  border-color: #381585;
+}
+
+form button[type="submit"],
+.btn-form-submit {
+  background-color: #00f5ff;
+  color: #0d022b;
+}
+
+/* Footer */
+.app-footer {
+  color: #8c7db3;
+  border-top: 1px solid #280e5b;
+}

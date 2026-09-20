@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PlayToCode - StudyHub{% endblock %}</title>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% if theme == "dark" %}
+  <link rel="stylesheet" href="{% static 'css/dark.css' %}">
+  {% else %}
+  <link rel="stylesheet" href="{% static 'css/light.css' %}">
+  {% endif %}
+</head>
+<body class="{{ theme|default:'light' }}-theme">
+
+  <div class="app-viewport-frame">
+    <!-- Header / Navbar -->
+    <header class="app-navbar-header">
+      <nav class="app-navbar">
+        
+        <!-- Brand Logo -->
+        <a href="{% url 'home' %}" class="nav-brand">
+            <img src="{% static 'images/logo.png' %}" alt="PlayToCode Logo" class="brand-logo" width="50" height="50">
+          <span class="brand-text">PlayToCode</span>
+        </a>
+
+        <!-- Real Navigation Links -->
+        <div class="nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'resource_list' %}">Games</a>
+          <a href="{% url 'favorites' %}">Favorites</a>
+          <a href="{% url 'preferences' %}">Preferences</a>
+          <a href="{% url 'feedback' %}">Feedback</a>
+        </div>
+
+        <!-- Search / Browse Action Pill -->
+        <div class="nav-search-pill">
+          <span class="search-glass-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <a href="{% url 'resource_list' %}" class="pill-browse-btn">Browse</a>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-content-body">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 PlayToCode &bull; StudyHub. Learn web development through gaming.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Games & Resources - PlayToCode{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Learning Games & Challenges</h1>
+  <p>Learn web development by playing games and completing interactive challenges.</p>
+</div>
+
+<div class="resource-grid">
+  {% for resource in resources %}
+  <article class="resource-card">
+    <div class="card-media">
+      {% if resource.image %}
+        <img src="/media/{{ resource.image }}" alt="{{ resource.title }}" loading="lazy">
+      {% else %}
+        <div class="card-media-placeholder"> <img src="{% static 'images/resource-placeholder.png' %}" alt="{{ resource.title }}" loading="lazy"> </div>
+      {% endif %}
+      <span class="card-badge">{{ resource.type|default:"Arcade" }}</span>
+    </div>
+
+    <div class="card-body">
+      <h2>{{ resource.title }}</h2>
+      <p>{{ resource.description }}</p>
+
+      <div class="card-actions">
+        <a class="btn btn-primary" href="{% url 'resource_detail' resource.id %}">
+          Play / Learn &rarr;
+        </a>
+      </div>
+    </div>
+  </article>
+  {% empty %}
+  <p>No resources available.</p>
+  {% endfor %}
+</div>
+{% endblock %}

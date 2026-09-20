@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ resource.title }} - PlayToCode{% endblock %}
+
+{% block content %}
+<article class="detail-container">
+  {% if resource.image %}
+    <img src="/media/{{ resource.image }}" alt="{{ resource.title }}" class="detail-img">
+  {% endif %}
+
+  <div class="page-header">
+    <span class="card-badge" style="position: static; display: inline-block; margin-bottom: 12px;">{{ resource.type }}</span>
+    <h1>{{ resource.title }}</h1>
+  </div>
+
+  <p class="hero-paragraph">{{ resource.description }}</p>
+
+  <div class="detail-actions">
+    <a href="{{ resource.url }}" target="_blank" class="btn btn-primary">
+      Launch Game &#8599;
+    </a>
+
+    <form method="POST" action="{% url 'toggle_favorite' resource.id %}" style="display:inline; padding:0; background:none; border:none; box-shadow:none;">
+      {% csrf_token %}
+      <button type="submit" class="btn-secondary">
+        Add / Remove Favorite
+      </button>
+    </form>
+
+    <a href="{% url 'resource_list' %}" class="btn-secondary">
+      &larr; Back to Games
+    </a>
+  </div>
+</article>
+{% endblock %}

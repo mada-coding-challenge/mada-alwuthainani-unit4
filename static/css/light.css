@@ -1,0 +1,156 @@
+/* Outer window background */
+body {
+  background-color: #dcd4f5;
+  color: #0e0926;
+}
+
+/* Main inner card/canvas */
+.app-viewport-frame {
+  background-color: #ffffff;
+  border: 1px solid #d4c8f0;
+}
+
+/* Header & Nav */
+.app-navbar-header {
+  border-bottom: 1px solid #ede7f8;
+}
+
+.nav-brand {
+  color: #0e0926;
+}
+
+.nav-links a {
+  color: #2b214c;
+}
+
+.nav-links a:hover {
+  color: #7c3aed;
+}
+
+/* Search pill on right */
+.nav-search-pill {
+  background-color: #f5f2fc;
+  border: 1px solid #ded7f2;
+}
+
+.search-glass-icon svg {
+  stroke: #7c3aed;
+}
+
+.pill-browse-btn {
+  background-color: #d9006c;
+  color: #ffffff;
+}
+
+/* Home Neon Titles in Light Mode */
+.line-magenta {
+  color: #c90064;
+}
+
+.line-yellow {
+  color: #a87600;
+}
+
+.hero-paragraph {
+  color: #4e466b;
+}
+
+.neon-dot {
+  background-color: #c48b00;
+}
+
+/* Read More Button */
+.btn-cyan-pill {
+  background-color: #0098a6;
+  color: #ffffff;
+}
+
+/* Resource Cards */
+.resource-card {
+  background-color: #ffffff;
+  border: 1px solid #e3dcf4;
+}
+
+.resource-card:hover {
+  border-color: #7c3aed;
+}
+
+.card-media {
+  background-color: #f2edf9;
+}
+
+.card-badge {
+  background-color: #efe8fa;
+  color: #5b21b6;
+  border: 1px solid #ddd1f5;
+}
+
+.card-body h2 {
+  color: #0e0926;
+}
+
+.card-body p {
+  color: #4e466b;
+}
+
+/* Buttons */
+.btn,
+.btn-primary {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #f3effa;
+  color: #2b214c;
+  border-color: #ded7f2;
+}
+
+/* Forms */
+form {
+  background-color: #ffffff;
+  border: 1px solid #e3dcf4;
+}
+
+form label {
+  color: #4e466b;
+}
+
+form input,
+form select,
+form textarea {
+  background-color: #ffffff;
+  color: #0e0926;
+  border-color: #d4c8f0;
+}
+
+form button[type="submit"],
+.btn-form-submit {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+
+/* Footer */
+.app-footer {
+  color: #7a7295;
+  border-top: 1px solid #ede7f8;
+}
+
+/* 404 Light Theme */
+.error-icon-box svg {
+  stroke: #7c3aed;
+}
+
+.error-badge-tag {
+  background-color: #efe8fa;
+  color: #d9006c;
+  border: 1px solid #d9006c;
+}
+
+.error-subtitle {
+  color: #0e0926;
+}
+
+.error-text {
+  color: #4e466b;
+}

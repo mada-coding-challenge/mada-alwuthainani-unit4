@@ -1,0 +1,400 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.app-viewport-frame {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 750px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.app-navbar-header {
+  padding: 20px 35px;
+}
+
+.app-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-search-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px 5px 14px;
+  border-radius: 50px;
+}
+
+.pill-browse-btn {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: transform 0.15s;
+}
+
+.pill-browse-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.app-content-body {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 500px;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-retro-title {
+  font-family: 'Monoton', cursive;
+  font-size: 3.5rem;
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.retro-line {
+  display: block;
+}
+
+.hero-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-indicator-dots {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.neon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn-cyan-pill {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 38px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+}
+
+.btn-cyan-pill:hover {
+  transform: translateY(-2px);
+}
+
+.hero-right {
+  max-width: 500px;
+  width: 100%;
+}
+
+.arcade-scene-svg {
+  width: 100%;
+  height: auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.resource-card {
+  width: calc(33.333% - 17px);
+  min-width: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-media-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.detail-container img {
+  width: 100%;
+
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.btn,
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.btn:hover,
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+
+form {
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 0.95rem;
+}
+
+form button[type="submit"],
+.btn-form-submit {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+  transition: transform 0.2s;
+}
+
+form button[type="submit"]:hover,
+.btn-form-submit:hover {
+  transform: translateY(-2px);
+}
+
+
+.app-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .app-navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .resource-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================================
+   404 ERROR PAGE
+   ========================================================== */
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 480px;
+}
+
+.error-icon-box {
+  margin-bottom: 15px;
+}
+
+.error-icon-box svg {
+  stroke-width: 1.5;
+}
+
+.error-badge-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.error-title {
+  font-family: 'Monoton', cursive;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.error-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.error-text {
+  max-width: 440px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.error-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
